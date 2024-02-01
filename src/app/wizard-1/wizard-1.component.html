@@ -1,0 +1,38 @@
+
+<div class="main-section">
+
+    <!--  -->
+  
+                    <div class="round-icons" style="margin-top: 10em;">
+                      <span class="round-tab" style="margin-left: 5em;" (click)="changeIndex(0)">
+                        <i class="glyphicon glyphicon-folder-open"></i>
+                        <!-- <p>pencil</p> -->
+                      </span>
+                      <span class="round-tab" style="margin-left: 10em;" (click)="changeIndex(1)">
+                        <i class="glyphicon glyphicon-pencil"></i>
+                      </span>
+                      <span class="round-tab" style="margin-left: 15em;" (click)="changeIndex(2)">
+                        <i class="glyphicon glyphicon-picture"></i>
+                      </span>
+                      <span class="round-tab" style="margin-left: 20em;" (click)="changeIndex(3)">
+                        <i class="glyphicon glyphicon-ok"></i>
+                      </span>
+                    </div>
+  
+  </div>
+  <div class="projection-content">
+    <ng-content></ng-content>
+  </div>
+
+
+  <div class="button-class">
+    <ng-container *ngIf="currentIndex>=1">
+        <button class="prev-button" (click)="previous()">Previous</button>
+      </ng-container>
+      <ng-container *ngIf="currentIndex==2">
+        <button class="skip-button" (click)="next()">Skip</button>
+      </ng-container>
+      <ng-container *ngIf="currentIndex!=3">
+        <button class="next-button" (click)="next()">Save and continue</button>
+      </ng-container>
+  </div>
