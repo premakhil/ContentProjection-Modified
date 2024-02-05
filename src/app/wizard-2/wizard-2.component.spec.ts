@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Wizard2Component } from './wizard-2.component';
 
-describe('Wizard2Component', () => {
+fdescribe('Wizard2Component', () => {
   let component: Wizard2Component;
   let fixture: ComponentFixture<Wizard2Component>;
 
@@ -20,4 +20,15 @@ describe('Wizard2Component', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it ('should receive emitted value',()=>{
+    // spyOn(component,'ngOnChanges');
+
+
+    // expect(component.ngOnChanges).toHaveBeenCalled();
+
+
+    expect(component.currentIndex).toEqual(0);
+
+  })
 });

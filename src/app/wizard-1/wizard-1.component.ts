@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component,EventEmitter,OnInit,Output } from '@angular/core';
+import { Wizard2Component } from '../wizard-2/wizard-2.component';
 
 @Component({
   selector: 'app-wizard-1',
@@ -20,16 +21,15 @@ public currentIndex:number=0;
   
 public indexSet: Set<number> = new Set<number>();
 
-
-
-
   public changeIndex(index:number):void {
+
   
     if (this.indexSet.size>=index){
       this.currentIndex=index;
       this.indexSet.add(index);
       this.indexEmitter.emit(this.currentIndex);
-
+      
+      
     }
 
   }
